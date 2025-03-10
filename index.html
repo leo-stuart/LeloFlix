@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeloFlix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+
+<body>
+    <header id="menu">
+        <nav>
+            <img id="logo" src="imgs/leloflixdark.png" alt="logo.png">
+
+            <input type="checkbox" id="toggleSearch">
+            <label id="searchIcon" for="toggleSearch">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div id="pesquisamedia">
+                <form action="search.php" method="GET">
+                    <input type="button" id="search">
+                    <input type="text" placeholder="Pesquisa" id="campoPesquisa">
+                </form>
+            </div>
+
+            <input type="checkbox" id="toggle">
+            <label id="menuIcon" for="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div id="hidebar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="generos.html">Gêneros</a></li>
+                        <li><a href="lista.html">Minha Lista</a></li>
+                    </ul>
+                </div>
+                <div id="direito">
+                    <div id="pesquisa">
+                        <form action="search.php" method="GET">
+                            <input type="button" id="search">
+                            <input type="text" placeholder="Pesquisa" id="campoPesquisa">
+                        </form>
+                    </div>
+                    <p><a href="login.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Entrar</a></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="filmeDestaque">
+            <div id="trailer">
+                <video src="imgs/trailerainda.mp4" autoplay muted loop></video>
+            </div>
+            <div id="container">
+                <h1>Ainda Estou Aqui</h1>
+                <div class="botoes">
+                    <button><i class="fa fa-play" aria-hidden="true"></i><a href="filmedestaque.html">Assistir
+                            Trailer</a></button>
+                    <button onclick="addToList()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <h1 class="categoria">Em alta</h1>
+        <section id="row">
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/oppenheimer1.jpg" media="(max-width: 600px)">
+                    <img src="imgs/filmes/oppenheimer.jpg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Oppenheimer</h2>
+                        <div>
+                            <h3 id="genero">Drama</h3>
+                            <h3>2023</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/conclave.webp" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Conclave</h2>
+                        <div>
+                            <h3 id="genero">Suspense</h3>
+                            <h3>2024</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/flow.jpg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Flow</h2>
+                        <div>
+                            <h3 id="genero">Animação</h3>
+                            <h3>2024</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/duna.jpg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Duna Parte Dois</h2>
+                        <div>
+                            <h3 id="genero">Ficção Científica</h3>
+                            <h3>2024</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/cidade.jpg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Cidade de Deus</h2>
+                        <div>
+                            <h3 id="genero">Drama</h3>
+                            <h3>2002</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <h1 class="categoria">Campeões de Bilheteria</h1>
+        <section id="row">
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/titanic1.jpg" media="(max-width: 600px)">
+                    <img src="imgs/filmes/titanic.webp" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titanic</h2>
+                        <div>
+                            <h3 id="genero">Drama</h3>
+                            <h3>1997</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/ultimato1.jpg" media="(max-width: 600px)">
+                    <img src="imgs/filmes/vingadores.webp" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Vingadores: Ultimato</h2>
+                        <div>
+                            <h3 id="genero">Ação</h3>
+                            <h3>2019</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/avatar.jpg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Avatar Caminho da água</h2>
+                        <div>
+                            <h3 id="genero">Aventura</h3>
+                            <h3>2022</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/starwars.webp" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Star Wars VII</h2>
+                        <div>
+                            <h3 id="genero">Fiçcão Científica</h3>
+                            <h3>2015</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/filmes/guerrainfinita.webp" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Vingadores Guerra Infinita</h2>
+                        <div>
+                            <h3 id="genero">Ação</h3>
+                            <h3>2018</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <picture>
+                    <source srcset="imgs/filmes/conclave1.avif" media="(max-width: 600px)">
+                    <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                </picture>
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footerEsquerdo">
+                <ul>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footerDireito">
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Informações Corporativas</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
