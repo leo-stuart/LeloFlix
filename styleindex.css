@@ -293,6 +293,11 @@ button:hover i {
     margin-right: 10px;
 }
 
+#pesquisa input {
+    font: size 0.8em;
+    color: #081020; /* Ensure text is visible */
+}
+
 #search {
     cursor: pointer;
     background: url('imgs/pesquisa.png') no-repeat center;
@@ -351,6 +356,7 @@ button:hover i {
     background-color: white;
     border-radius: 20px;
     padding: 0px;
+    transition: 0.5s;
 }
 
 #campoPesquisaMedia {
@@ -359,6 +365,8 @@ button:hover i {
     padding: 0px;
     max-width: 100%;
     background-color: white;
+    transition: 0.5s;
+    color: #081020; /* Ensure text is visible */
 }
 
 /* Fim do Desktop */
@@ -383,6 +391,7 @@ button:hover i {
         border-top-right-radius: 20px;
         padding: 20px;
         box-shadow: 0px -10px 20px #00A2FF;
+        transition: 0.5s;
     }
 
     .menu {
